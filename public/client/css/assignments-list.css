@@ -1,0 +1,448 @@
+/* ============================================
+   ASSIGNMENTS LIST PAGE STYLES
+   ============================================ */
+
+/* Action Buttons */
+.action-buttons-wrapper {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(13, 110, 253, 0.4);
+    color: white;
+}
+
+.action-btn i {
+    font-size: 1.1rem;
+}
+
+.action-btn-success {
+    background: linear-gradient(135deg, #198754 0%, #146c43 100%);
+    box-shadow: 0 4px 12px rgba(25, 135, 84, 0.3);
+}
+
+.action-btn-success:hover {
+    box-shadow: 0 6px 16px rgba(25, 135, 84, 0.4);
+}
+
+/* Table Wrapper */
+.assignments-table-wrapper {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.table-responsive {
+    max-height: 650px;
+    overflow-y: auto;
+    overflow-x: auto; /* Horizontal scroll qo'shish */
+    border-radius: 12px;
+}
+
+/* Custom Scrollbar */
+.table-responsive::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #f1f3f5;
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #0d6efd;
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #0a58ca;
+}
+
+/* Table Styles */
+.assignments-table {
+    margin-bottom: 0;
+    min-width: 1200px; /* Minimal kenglik */
+}
+
+.assignments-table thead th {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: #495057;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    padding: 1rem 0.75rem;
+    border: none;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.assignments-table tbody td {
+    padding: 1rem 0.75rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #f1f3f5;
+    font-size: 0.9rem;
+    white-space: normal; /* Matnni o'rash uchun */
+    word-wrap: break-word; /* Uzun so'zlarni bo'lish */
+}
+/* Har bir ustun uchun kenglik */
+.assignments-table thead th:nth-child(1),
+.assignments-table tbody td:nth-child(1) {
+    width: 50px; /* № ustuni */
+    text-align: center;
+}
+
+.assignments-table thead th:nth-child(2),
+.assignments-table tbody td:nth-child(2) {
+    width: 250px; /* Topshiriq nomi - eng katta */
+    min-width: 250px;
+}
+
+.assignments-table thead th:nth-child(3),
+.assignments-table tbody td:nth-child(3) {
+    width: 150px; /* Kim berdi */
+    min-width: 150px;
+}
+
+.assignments-table thead th:nth-child(4),
+.assignments-table tbody td:nth-child(4) {
+    width: 140px; /* Sana */
+    min-width: 140px;
+}
+
+.assignments-table thead th:nth-child(5),
+.assignments-table tbody td:nth-child(5) {
+    width: 150px;
+    min-width: 150px;
+    padding: 0.5rem 0.75rem !important;
+    vertical-align: middle;
+}
+
+.assignments-table tbody td:nth-child(5) .user-badge {
+    white-space: normal !important; /* ✅ Bir nechta qatorga o'tkazish */
+    word-wrap: break-word; /* ✅ Uzun so'zlarni bo'lish */
+    word-break: break-word; /* ✅ Kerak bo'lganda so'zni bo'lish */
+    max-width: 150px; /* ✅ Maksimal kenglik */
+    line-height: 1.4; /* ✅ Qatorlar orasidagi masofa */
+}
+
+.assignments-table thead th:nth-child(6),
+.assignments-table tbody td:nth-child(6) {
+    width: 180px; /* Ijrochilар */
+    min-width: 180px;
+}
+
+.assignments-table thead th:nth-child(7),
+.assignments-table tbody td:nth-child(7) {
+    width: 200px; /* Izoh */
+    min-width: 200px;
+}
+
+.assignments-table thead th:nth-child(8),
+.assignments-table tbody td:nth-child(8) {
+    width: 140px; /* Amallar */
+    min-width: 140px;
+    text-align: center;
+}
+
+.assignments-table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.assignments-table tbody tr:hover {
+    background: #f8f9fa;
+    transform: scale(1.001);
+}
+
+/* Assignment Name */
+.assignment-name {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.assignment-name i {
+    color: #0d6efd;
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+/* Badges */
+.user-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.75rem;
+    background: #e7f1ff;
+    color: #0d6efd;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.user-badge i {
+    font-size: 0.8rem;
+}
+
+.date-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.75rem;
+    background: #f8f9fa;
+    color: #495057;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.date-badge i {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Comment Cell - word wrap */
+.comment-cell {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #6c757d;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.comment-cell i {
+    margin-top: 0.2rem;
+    color: #0d6efd;
+    flex-shrink: 0;
+}
+
+/* Action Buttons Group */
+.action-buttons-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+}
+
+.action-btn-sm {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.action-btn-info {
+    background: linear-gradient(135deg, #0dcaf0 0%, #0aa2c0 100%);
+    color: white;
+}
+
+.action-btn-info:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(13, 202, 240, 0.3);
+}
+
+.action-btn-warning {
+    background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+    color: #000;
+}
+
+.action-btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
+}
+
+.action-btn-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+}
+
+.action-btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
+}
+
+/* Empty State */
+.empty-state {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: #6c757d;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    color: #dee2e6;
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Pagination */
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.pagination-wrapper .pagination {
+    margin: 0;
+}
+
+/* Filter Info Card */
+.filter-info-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.filter-info-card i {
+    color: #0d6efd;
+    font-size: 1.1rem;
+}
+
+.filter-info-card strong {
+    color: #495057;
+}
+
+.filter-badge {
+    padding: 0.35rem 0.85rem;
+    background: #e7f1ff;
+    color: #0d6efd;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .action-buttons-wrapper {
+        flex-direction: column;
+    }
+    
+    .action-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .assignments-table thead th {
+        font-size: 0.7rem;
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .assignments-table tbody td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .action-buttons-group {
+        flex-direction: column;
+    }
+}
+
+/* Dark Mode */
+body.dark-mode .assignments-table-wrapper {
+    background: rgba(26, 31, 54, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .table-responsive::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .table-responsive::-webkit-scrollbar-thumb {
+    background: rgba(13, 110, 253, 0.5);
+}
+
+body.dark-mode .assignments-table thead th {
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.2) 0%, rgba(10, 88, 202, 0.2) 100%);
+    color: #e0e0e0;
+}
+
+body.dark-mode .assignments-table tbody tr:hover {
+    background: rgba(13, 110, 253, 0.1);
+}
+
+body.dark-mode .user-badge {
+    background: rgba(13, 110, 253, 0.2);
+    color: #0dcaf0;
+}
+
+body.dark-mode .date-badge {
+    background: rgba(255, 255, 255, 0.05);
+    color: #e0e0e0;
+}
+
+body.dark-mode .comment-cell {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark-mode .filter-info-card {
+    background: rgba(26, 31, 54, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .filter-info-card strong {
+    color: #e0e0e0;
+}
+
+body.dark-mode .filter-badge {
+    background: rgba(13, 110, 253, 0.2);
+    color: #0dcaf0;
+}
+
+body.dark-mode .empty-state {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+body.dark-mode .empty-state i {
+    color: rgba(255, 255, 255, 0.2);
+}

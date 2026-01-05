@@ -1,0 +1,101 @@
+/* ============================================
+   DARK MODE STYLES
+   ============================================ */
+
+body.dark-mode {
+    background-color: #0a0e1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .content {
+    background: linear-gradient(135deg, #0a0e1a 0%, #1a1f36 100%);
+}
+
+/* Navigation in Dark Mode */
+body.dark-mode .d-flex.gap-3.flex-wrap {
+    background: rgba(26, 31, 54, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .table {
+    color: #e0e0e0;
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #333333;
+}
+
+body.dark-mode .table-hover > tbody > tr:hover {
+    background-color: #3a3a3a;
+}
+
+body.dark-mode .btn-outline-light {
+    color: #e0e0e0;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .btn-outline-light:hover {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    border-color: #0d6efd;
+    color: #fff;
+}
+
+body.dark-mode .btn-outline-light.active {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    border-color: #0d6efd;
+    color: #fff;
+}
+
+/* Cards in Dark Mode */
+body.dark-mode .card {
+    background: rgba(26, 31, 54, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+body.dark-mode .card-header {
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.3) 0%, rgba(10, 88, 202, 0.3) 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode hr {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+/* DataTables Dark Mode */
+body.dark-mode .dataTables_wrapper {
+    color: #e0e0e0;
+}
+
+body.dark-mode .dataTables_filter input {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode .dataTables_length select {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode .dataTables_info {
+    color: #aaa;
+}
+
+body.dark-mode .paginate_button {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .dt-button {
+    background-color: #444;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode .dt-button:hover {
+    background-color: #555;
+}

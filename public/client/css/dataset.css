@@ -1,0 +1,579 @@
+/* ============================================
+   DATASET PAGE STYLES
+   ============================================ */
+
+/* Summary Cards */
+.summary-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.summary-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+}
+
+.summary-card-primary::before {
+    background: linear-gradient(90deg, #0d6efd 0%, #0a58ca 100%);
+}
+
+.summary-card-success::before {
+    background: linear-gradient(90deg, #198754 0%, #146c43 100%);
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.summary-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(13, 110, 253, 0.05) 100%);
+    flex-shrink: 0;
+}
+
+.summary-card-success .summary-icon {
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.1) 0%, rgba(25, 135, 84, 0.05) 100%);
+}
+
+.summary-icon i {
+    font-size: 2.5rem;
+    color: #0d6efd;
+}
+
+.summary-card-success .summary-icon i {
+    color: #198754;
+}
+
+.summary-content {
+    flex: 1;
+}
+
+.summary-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.summary-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #212529;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.summary-subtitle {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.summary-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(13, 110, 253, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.summary-arrow i {
+    color: #0d6efd;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Container */
+.kpi-dropdown-container {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Task Accordion */
+.task-accordion {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.task-accordion:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.task-accordion-danger {
+    border: 2px solid rgba(220, 53, 69, 0.2);
+}
+
+.task-header {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.05) 0%, rgba(13, 110, 253, 0.02) 100%);
+}
+
+.task-accordion-danger .task-header {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.05) 0%, rgba(220, 53, 69, 0.02) 100%);
+}
+
+.task-header:hover {
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.08) 0%, rgba(13, 110, 253, 0.04) 100%);
+}
+
+.task-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.task-info i {
+    font-size: 1.3rem;
+    color: #0d6efd;
+}
+
+.task-accordion-danger .task-info i {
+    color: #dc3545;
+}
+
+.task-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.task-badge {
+    padding: 0.35rem 0.85rem;
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    color: white;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.task-badge-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+.task-arrow {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(13, 110, 253, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-arrow i {
+    color: #0d6efd;
+    transition: transform 0.3s ease;
+}
+
+.task-content {
+    padding: 1.5rem;
+    border-top: 1px solid #f1f3f5;
+    animation: slideDown 0.3s ease;
+}
+
+/* View Toggle */
+.view-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.view-toggle {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 28px;
+}
+
+.view-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider-custom {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 28px;
+}
+
+.toggle-slider-custom:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.view-toggle input:checked + .toggle-slider-custom {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+}
+
+.view-toggle input:checked + .toggle-slider-custom:before {
+    transform: translateX(27px);
+}
+
+.toggle-label-custom {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Assignments Grid */
+.assignments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.25rem;
+}
+
+.assignment-card {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.assignment-card:hover {
+    border-color: #0d6efd;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.1);
+    transform: translateY(-2px);
+}
+
+.assignment-card-danger {
+    border-color: rgba(220, 53, 69, 0.3);
+}
+
+.assignment-card-danger:hover {
+    border-color: #dc3545;
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.1);
+}
+
+.assignment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.assignment-badge {
+    padding: 0.35rem 0.75rem;
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.badge-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+.assignment-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+.rating-danger {
+    color: #dc3545;
+}
+
+.assignment-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.assignment-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.assignment-item i {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-top: 0.2rem;
+}
+
+.assignment-item > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.item-label {
+    font-size: 0.75rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.item-value {
+    font-size: 0.95rem;
+    color: #212529;
+    font-weight: 500;
+}
+
+.assignment-comment {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+.assignment-comment i {
+    color: #6c757d;
+    margin-top: 0.2rem;
+}
+
+.assignment-comment p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #495057;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .summary-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .summary-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .summary-value {
+        font-size: 2rem;
+    }
+    
+    .assignments-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .task-info {
+        flex-wrap: wrap;
+    }
+}
+
+/* Dark Mode */
+body.dark-mode .summary-card,
+body.dark-mode .kpi-dropdown-container,
+body.dark-mode .task-accordion,
+body.dark-mode .assignment-card {
+    background: rgba(26, 31, 54, 0.6);
+    backdrop-filter: blur(10px);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .summary-title,
+body.dark-mode .summary-subtitle,
+body.dark-mode .task-name,
+body.dark-mode .item-label,
+body.dark-mode .toggle-label-custom {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark-mode .summary-value,
+body.dark-mode .item-value {
+    color: #e0e0e0;
+}
+
+body.dark-mode .task-header {
+    background: rgba(13, 110, 253, 0.05);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .task-content {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .view-toggle-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .assignment-comment {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .assignment-comment p {
+    color: rgba(255, 255, 255, 0.7);
+}
+/* ============================================
+   TABLE DARK MODE - TO'LIQ VERSIYA
+   ============================================ */
+
+/* Table asosiy rang */
+body.dark-mode .table,
+body.dark-mode table {
+    color: #e0e0e0 !important;
+    background-color: #1a1f36 !important;
+}
+
+/* Table header */
+body.dark-mode .table thead th,
+body.dark-mode table thead th {
+    background-color: #0070e0 !important;
+    color: #1d1d1d !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Table body */
+body.dark-mode .table tbody td,
+body.dark-mode table tbody td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #e0e0e0 !important;
+    background-color: #1a1f36 !important;
+}
+
+/* Table qatorlar */
+body.dark-mode .table tbody tr,
+body.dark-mode table tbody tr {
+    background-color: #1a1f36 !important;
+}
+
+body.dark-mode .table tbody tr:hover,
+body.dark-mode table tbody tr:hover {
+    background-color: #252b45 !important;
+}
+
+/* Striped table */
+body.dark-mode .table-striped tbody tr:nth-of-type(odd),
+body.dark-mode table tbody tr:nth-of-type(odd) {
+    background-color: #1f2540 !important;
+}
+
+body.dark-mode .table-striped tbody tr:nth-of-type(even),
+body.dark-mode table tbody tr:nth-of-type(even) {
+    background-color: #1a1f36 !important;
+}
+
+/* Danger row */
+body.dark-mode .table tbody tr.table-danger,
+body.dark-mode table tbody tr.table-danger {
+    background-color: rgba(220, 53, 69, 0.2) !important;
+}
+
+/* Table container */
+body.dark-mode .table-responsive {
+    background: #1a1f36 !important;
+}
+
+/* DataTables wrapper */
+body.dark-mode .dataTables_wrapper {
+    background: transparent !important;
+    color: #e0e0e0 !important;
+}
+
+/* DataTables input va select */
+body.dark-mode .dataTables_filter input,
+body.dark-mode .dataTables_length select {
+    background-color: #1a1f36 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* DataTables info va pagination */
+body.dark-mode .dataTables_info {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .dataTables_paginate {
+    color: #e0e0e0 !important;
+}
+
+/* Table ichidagi barcha elementlar */
+body.dark-mode table * {
+    color: #e0e0e0 !important;
+}
+
+/* Badge va buttonlar table ichida */
+body.dark-mode .table .badge,
+body.dark-mode table .badge {
+    color: #fff !important;
+}
+
+body.dark-mode .table .btn,
+body.dark-mode table .btn {
+    color: #fff !important;
+}
+
+/* Strong text */
+body.dark-mode .table strong,
+body.dark-mode table strong {
+    color: #fff !important;
+}
