@@ -86,6 +86,7 @@ class TaskAssignmentExport implements FromArray, WithStyles, WithColumnWidths
                 ->whereIn('user_id', $userIds)
                 ->whereNotNull('task_id')
                 ->whereNotNull('subtask_id')
+                ->whereNotNull('name')
                 ->whereNotNull('rating')
                 ->whereBetween('date', [$this->startDate, $this->endDate])
                 ->get();
@@ -97,6 +98,7 @@ class TaskAssignmentExport implements FromArray, WithStyles, WithColumnWidths
                 return (object) [
                     'id' => $assignment->id,
                     'user_id' => $assignment->user_id,
+                    'name' => $assignment->name,
                     'rating' => (float) $assignment->rating,
                     'comment' => $assignment->comment,
                     'addDate' => $assignment->date,  // ✅ date → addDate
@@ -169,7 +171,8 @@ class TaskAssignmentExport implements FromArray, WithStyles, WithColumnWidths
                     $data[] = [
                         $index,
                         $subtaskInfo,
-                        $taskName,
+                        // $taskName,
+                        $assignment->name,
                         $assignment->rating,
                         $assignment->comment ?? '',
                         Carbon::parse($assignment->addDate)->format('n/j/Y')
